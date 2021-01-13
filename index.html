@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Andrew Gs Game</title>
+<title>Andrew G Game</title>
 </head>
 <body>
 
-<form action="https://www.google.com" method="GET" target="_blank">
+<h2>Andrew Greenslade's Game</h2>
+<h4>Welcome to my game, enjoy!</h4>
+<form action="/controller.html" method="get" target="_blank">
 
-<input type="text" name="q" value="pwa">
 
-<input type="text" name="username">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+  
+  <br>  <br>
+  
+  <input type="radio" id="Fists" name="Weapon" value="male">
+  <label for="male">Fists</label><br>
+  <input type="radio" id="Sword" name="Weapon" value="female">
+  <label for="female">Sword</label><br>
+  <input type="radio" id="Stick" name="Weapon" value="other">
+  <label for="other">Stick</label>
 
-<input type="password" name="password">
-<br>
+  <br>  <br>
 
-<input type="radio" name="enemy" value="npc">NPC<br>
-<input type="radio" name="enemy" value="boss" checked>Boss
+  <input type="submit" value="Submit">
 
-<br>
-
-<input type="hidden" name="wallet" value="phil">
-
-<select name="enemy_color">​
-    <option value="Red">red</option>​
-    <option value="Green">green</option>​
-    <option value="BLUE">blue</option>​
-</select>
-<br>
-
-<button type="reset">Reset</button>
-<button type="submit">Send my info to Google</button>
 
 </form>
 
