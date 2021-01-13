@@ -16,22 +16,22 @@ function weaponSelection()
 	document.getElementById("HUD").innerHTML = selection + " Equipped";
    	if(selection === "Mighty Stick")
 	{
-		images[1].src = "./UI-Prog_HCI-GUI-9/img/SpriteSheetStick.png";
+		images[1].src = "./img/SpriteSheetStick.png";
 	}
 	else if (selection === "Longsword")
 	{
-		images[1].src = "./UI-Prog_HCI-GUI-9/img/SpriteSheetSword.png";
+		images[1].src = "./img/SpriteSheetSword.png";
 	}
 	else if(selection === "No Weapon")
 	{
-		images[1].src = "./UI-Prog_HCI-GUI-9/img/SpriteSheetNone.png";
+		images[1].src = "./img/SpriteSheetNone.png";
 	}
 	
   } else {
     document.getElementById("HUD").innerHTML = selection + " selected ";
     console.log("Weapon Selected");
 	
-	images[1].src = "./UI-Prog_HCI-GUI-9/img/SpriteSheetNone.png";
+	images[1].src = "./img/SpriteSheetNone.png";
 	
   }
 }
@@ -105,11 +105,11 @@ function GamerInput(input) {
 // Default GamerInput is set to None
 var gamerInput = new GamerInput("None"); //No Input
 // Default Player
-var player = new GameObject("Player", "./UI-Prog_HCI-GUI-9/img/SpriteSheet.png", 100, 600, 600);
+var player = new GameObject("Player", "./img/SpriteSheet.png", 100, 600, 600);
 //Player Weapon
-var StickObject = new GameObject("Stick", "./UI-Prog_HCI-GUI-9/img/SpriteSheetStick.png", 0, -25, -25);
+var StickObject = new GameObject("Stick", "./img/SpriteSheetStick.png", 0, -25, -25);
 // Gameobjects is a collection of the Actors within the game
-var gameobjects = [player, StickObject, new GameObject("NPC", "./UI-Prog_HCI-GUI-9/img/1to6.png", 100, 0, 0)];
+var gameobjects = [player, StickObject, new GameObject("NPC", "./img/1to6.png", 100, 0, 0)];
 
 // get a handle to the canvas context
 var canvas = document.getElementById("game");
@@ -118,10 +118,10 @@ var context = canvas.getContext("2d");
 
 //background image and source
 var bg = new Image();
-var bgSRC = "./UI-Prog_HCI-GUI-9/img/GrassTexture.jpg";
+var bgSRC = "./img/GrassTexture.jpg";
 bg.src = bgSRC;
-var DeathBGSRC = "./UI-Prog_HCI-GUI-9/img/DeathScreen.png";
-var WinBGSRC = "./UI-Prog_HCI-GUI-9/img/WinScreen.png";
+var DeathBGSRC = "./img/DeathScreen.png";
+var WinBGSRC = "./img/WinScreen.png";
 
 //images array
 var images = new Array(); 
