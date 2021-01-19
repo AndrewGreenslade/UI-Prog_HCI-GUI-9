@@ -44,7 +44,7 @@
         <tbody>
             <tr> 
 				<td>&nbsp;</td>
-                <td><button onmousedown="MeleeButtonDown()" onclick="playButtonClick()" id="MeleeButton" class="button red round">&#9876</button></td>                			
+                <td><button ontouchend="MeleeButtonDown()" onmousedown="MeleeButtonDown()" onclick="playButtonClick()" id="MeleeButton" class="button red round">&#9876</button></td>                			
                 <td>&nbsp;</td>
             </tr>
         </tbody>
@@ -54,17 +54,17 @@
         <tbody>
             <tr>
                 <td>&nbsp;</td>
-                <td><button onmousedown="UpbuttonOnClick()" onclick="playButtonClick()" id="buttonUp" class="button yellow round">&#8593</button></td>
+                <td><button ontouchend="ButtonUp()" ontouchstart="UpbuttonOnClick()" onmousedown="UpbuttonOnClick()" onclick="playButtonClick()" id="buttonUp" class="button yellow round">&#8593</button></td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td><button onmousedown="LeftbuttonOnClick()" onclick="playButtonClick()" id="buttonLeft" class="button blue round">&#8592</button></td>
+                <td><button ontouchend="ButtonUp()" ontouchstart="LeftbuttonOnClick()" onmousedown="LeftbuttonOnClick()" onclick="playButtonClick()" id="buttonLeft" class="button blue round">&#8592</button></td>
                 <td>&nbsp;</td>
-                <td><button onmousedown="RightbuttonOnClick()" onclick="playButtonClick()" id="buttonRight" class="button cyan round">&#8594</button></td>
+                <td><button ontouchend="ButtonUp()" ontouchstart="RightbuttonOnClick()" onmousedown="RightbuttonOnClick()" onclick="playButtonClick()" id="buttonRight" class="button cyan round">&#8594</button></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
-                <td><button onmousedown="DownbuttonOnClick()" onclick="playButtonClick()" id="buttonDown" class="button green round">&#8595</button></td>
+                <td><button ontouchend="ButtonUp()" ontouchstart="DownbuttonOnClick()" onmousedown="DownbuttonOnClick()" onclick="playButtonClick()" id="buttonDown" class="button green round">&#8595</button></td>
                 <td>&nbsp;</td>
             </tr>
         </tbody>
