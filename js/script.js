@@ -6,6 +6,7 @@
 //	W,A,S,D to move, E to hit enemy
 
 //function for selecting different wepaons
+
 function weaponSelection() 
 {
   var selection = document.getElementById("equipment").value;
@@ -35,8 +36,6 @@ function weaponSelection()
 	
   }
 }
-
-var search = window.location.search;
 
 // Draw a HealthBar on Canvas, can be used to indicate players health
 function drawPlayerHealthbar() {
@@ -165,7 +164,6 @@ document.getElementById("MeleeButton").onmouseup = function() {MeleeButtonUp()};
 //sound variable
 var mySound = document.getElementById("sound");   
 
-
 //function for Left Input
 function LeftbuttonOnClick(){
 	gamerInput = new GamerInput("Left");
@@ -205,6 +203,7 @@ function MeleeButtonUp(){
 //npc mvoment code, for making npc follow player
 function NPCMovement()
 {
+	
 	// Player x co-ord follow player code
 	if(gameobjects[2].x < gameobjects[0].x)
 	{
