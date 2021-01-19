@@ -40,13 +40,37 @@
 }
 
 .RightAllign {
-	padding-top: 30px;
-	position:absolute;
-	left:550px;
+	display: inline-flex;
+	max-width: 400px;
 }
 
 .LeftAllign {
-	padding-top: 30px;
-	position:absolute;
-	left:5%;
+	max-width: 100px;
+	display: inline-flex;
+	align-items:center;
+	
+}
+
+.CenterAlign {
+	max-width: 500px;
+	margin:auto;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+	text-align: center;
+	background-color:green;
+	color:white;
+font-family: "Comic Sans MS", "Comic Sans", cursive;
+
 }

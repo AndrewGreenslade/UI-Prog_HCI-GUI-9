@@ -10,32 +10,11 @@
 <body>
 	<h1 id="WelcomeName"> </h1>
 	<h1 id="HUD"> </h1>
-	<!--<table>
-        <tbody>
-			<tr>
-				<td colspan="3" align="center">
-					<div class="custom-select" style="width:200px;">
-						<select id="equipment" onchange="weaponSelection()">
-						</select>
-					</div>
-				</td>
-			</tr>
-            <tr>
-				<td colspan="3" align="center">
-					<label class="switch">
-						<input id="active" onclick="weaponSelection()" type="checkbox">
-						<span class="toggle"></span>
-					</label>
-				</td>
-            </tr>
-        </tbody>
-    </table>-->
-
 	<canvas tabindex="1" id="game" width="800" height="800" style="border: black 1px solid;">
         Oops! looks like your browser does not support canvas tag
     </canvas>
-
-<table class="LeftAllign">
+	<br>
+	<table class="LeftAllign">
 
 		<audio id="sound">   
 			<source src="audio/ButtonPress.mp3">   
@@ -43,9 +22,19 @@
 		</audio> 
 
         <tbody>
+		    <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
             <tr> 
 				<td>&nbsp;</td>
                 <td><button ontouchend="MeleeButtonDown()" onmousedown="MeleeButtonDown()" onclick="playButtonClick()" id="MeleeButton" class="button red round">&#9876</button></td>                			
+                <td>&nbsp;</td>
+            </tr>
+		    <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
         </tbody>
