@@ -7,34 +7,30 @@
 
 //function for selecting different wepaons
 
+var queryString = window.location.search;
+var params = new URLSearchParams(queryString);
+var FirstName = params.get("fname");
+var SecondName = params.get("lname");
+var weaponOfChoice = params.get("Weapon");
+
 function weaponSelection() 
 {
-  var selection = document.getElementById("equipment").value;
-  var active = document.getElementById("active");
-  
-  if (active.checked == true)
-  {
-	document.getElementById("HUD").innerHTML = selection + " Equipped";
-   	if(selection === "Mighty Stick")
+	document.getElementById("WelcomeName").innerHTML = "Welcome : " + FirstName + " " + SecondName;
+	document.getElementById("HUD").innerHTML = "Weapon Of Choice : " + weaponOfChoice;
+
+	console.log(weaponOfChoice);
+	if(weaponOfChoice === "Stick")
 	{
 		images[1].src = "./Img/SpriteSheetStick.png";
 	}
-	else if (selection === "Longsword")
+	else if (weaponOfChoice === "Sword")
 	{
 		images[1].src = "./Img/SpriteSheetSword.png";
 	}
-	else if(selection === "No Weapon")
+	else if(weaponOfChoice === "Fists")
 	{
 		images[1].src = "./Img/SpriteSheetNone.png";
 	}
-	
-  } else {
-    document.getElementById("HUD").innerHTML = selection + " selected ";
-    console.log("Weapon Selected");
-	
-	images[1].src = "./Img/SpriteSheetNone.png";
-	
-  }
 }
 
 // Draw a HealthBar on Canvas, can be used to indicate players health
@@ -62,31 +58,6 @@ function drawEnemyHealthbar() {
   var fillVal = Math.min(Math.max(val / max, 0), 1);
   context.fillRect(gameobjects[2].x, gameobjects[2].y + 170, fillVal * width, height);
 }
-
-
-// Array of Weapon Options
-var options = [{
-    "text": "No Weapon",
-    "value": "No Weapon",
-    "selected": true
-  },
-  {
-    "text": "Stick",
-    "value": "Mighty Stick"
-  },
-  {
-    "text": "Sword",
-    "value": "Longsword"
-  }
-];
-
-var selectBox = document.getElementById('equipment');
-
-for (var i = 0; i < options.length; i++) {
-  var option = options[i];
-  selectBox.options.add(new Option(option.text, option.value, option.selected));
-}
-
 
 function GameObject(name, img, health,x,y)
 {
@@ -272,7 +243,6 @@ function DamageSystem()
 //function for controlling input to move character
 function update()
 {
-	
 	if(gameobjects[0].health > 0)
 	{
 		// Updating position and gamestate of player
@@ -313,7 +283,6 @@ function draw()
 	//background image draw
 	context.drawImage(bg,0,0,800,800);
 	
-
     for (i = 0; i < gameobjects.length; i++)
 	{
 		if(gameobjects[i].name === "Stick")
@@ -400,4 +369,4 @@ function playButtonClick()
 
 // Handle Active Browser Tag Animation
 window.requestAnimationFrame(gameloop);
-
+weaponSelection();
