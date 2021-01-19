@@ -36,6 +36,8 @@ function weaponSelection()
   }
 }
 
+var search = window.location.search;
+
 // Draw a HealthBar on Canvas, can be used to indicate players health
 function drawPlayerHealthbar() {
   var width = 150;
